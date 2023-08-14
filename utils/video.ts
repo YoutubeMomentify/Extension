@@ -89,6 +89,7 @@ export function observeVideoState(comments: IComment[]) {
 }
 
 export function getId() {
+
     while (commentsContainer.firstChild) {
       commentsContainer.removeChild(commentsContainer.firstChild);
     }
@@ -96,6 +97,6 @@ export function getId() {
     const urlParams = new URLSearchParams(url.split('?')[1]);
     const urlID = urlParams.get('v');
     if (urlID && urlID.length > 0) {
-      getAllComments(urlID);
+      getAllComments(urlID, true);
     }
 }

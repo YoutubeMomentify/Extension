@@ -1,7 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/poppins': ^5.0.8
   '@ianvs/prettier-plugin-sort-imports': 4.1.0
+  '@plasmohq/storage': ^1.7.2
   '@types/chrome': 0.0.241
   '@types/node': 20.4.2
   '@types/react': 18.2.15
@@ -17,6 +19,8 @@ specifiers:
   typescript: 5.1.6
 
 dependencies:
+  '@fontsource/poppins': 5.0.8
+  '@plasmohq/storage': 1.7.2_react@18.2.0
   plasmo: 0.82.0_4aoll5lo3wubgbixlw34ohohly
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -430,6 +434,10 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       cross-spawn: 7.0.3
+    dev: false
+
+  /@fontsource/poppins/5.0.8:
+    resolution: {integrity: sha512-P8owfYWluoUY5Nyzk4gT/L6LmLmseP6ezFWhj6VBUa5pRIdnCvNJpoQ6i/vhekjtJOfqX6nKlB+LCttoUl2GQQ==}
     dev: false
 
   /@ianvs/prettier-plugin-sort-imports/4.1.0_prettier@3.0.0:
@@ -1963,6 +1971,18 @@ packages:
       - velocityjs
       - walrus
       - whiskers
+    dev: false
+
+  /@plasmohq/storage/1.7.2_react@18.2.0:
+    resolution: {integrity: sha512-N8hliSa3XJftAA5gZASKVVMbZ+jxTlNIehRTNT7rIgYhm+PNGXa1xZkuAlv+JDFIUuYMI84/xvVqivKedld73Q==}
+    peerDependencies:
+      react: ^16.8.6 || ^17 || ^18
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      pify: 6.1.0
+      react: 18.2.0
     dev: false
 
   /@pnpm/config.env-replace/1.1.0:
@@ -4504,6 +4524,11 @@ packages:
     engines: {node: '>=6'}
     dev: false
     optional: true
+
+  /pify/6.1.0:
+    resolution: {integrity: sha512-KocF8ve28eFjjuBKKGvzOBGzG8ew2OqOOSxTTZhirkzH7h3BI1vyzqlR0qbfcDBve1Yzo3FVlWUAtCRrbVN8Fw==}
+    engines: {node: '>=14.16'}
+    dev: false
 
   /pirates/4.0.6:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}

@@ -8,10 +8,10 @@ export const CommentsContainerStyles = `
     z-index: 99999;
 `
 export const commentAvatarStyles = `
-  width: 36px;
-  height: 36px;
+  width: 32px;
   flex-shrink: 0;
   border-radius: 50%;
+  border: solid 2px white;
 `;
 
 export const commentDivStyles = `
@@ -26,7 +26,7 @@ export const commentDivStyles = `
   min-height: 44px;
   max-height: 88px;
   flex-shrink: 0;
-  background-color: rgba(217, 217, 217, .6);
+  background-color: #6e646499;
   border-radius: 10px;
   opacity: 0;
   transform: translateX(-100%);

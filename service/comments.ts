@@ -1,26 +1,27 @@
 import axios, { type AxiosResponse } from "axios"
 
 import type {
-  checkStateType,
   IComment,
   IYouTubeComment,
-  observeType,
   YouTubeDataAPIResponse
 } from "~types"
 import { checkVideoState, observeVideoState } from "~utils/video"
 
-const matchingComments: IComment[] = []
+let matchingComments: IComment[] = []
 
 export async function getAllComments(
   id: string,
-  pageToken = ""
+  first: boolean,
+  pageToken = "",
 ): Promise<void> {
   const maxResults = 100
+  if (first) {
+    matchingComments = []
+  }
   let apiUrl = `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&maxResults=${maxResults}&videoId=${id}&key=${process.env.PLASMO_PUBLIC_API_KEY}`
   if (pageToken !== "") {
     apiUrl += `&pageToken=${pageToken}`
   }
-
   try {
     const response: AxiosResponse<YouTubeDataAPIResponse> = await axios.get(
       apiUrl
@@ -43,7 +44,8 @@ export async function getAllComments(
     if (response.data.nextPageToken) {
       await getAllComments(
         id,
-        response.data.nextPageToken
+        false,
+        response.data.nextPageToken,
       )
     } else {
       checkVideoState(matchingComments)

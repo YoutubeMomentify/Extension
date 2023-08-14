@@ -35,4 +35,10 @@ export interface IComment {
 
 export type checkStateType = () => void ;
 export type observeType = () => void ;
-export type mainType = (num:Number) => void 
+export type mainType = (num:Number) => void;
+
+export interface IOptions {
+  ENABLED: boolean,
+  THEME: "dark" | "light",
+  SHOW_ONE_COMMENT: boolean,
+}
