@@ -42,3 +42,10 @@ export interface IOptions {
   THEME: "dark" | "light",
   SHOW_ONE_COMMENT: boolean,
 }
+
+
+export interface ITheme {
+  bg: string,
+  textColor: string,
+  borderColor: string,
+}

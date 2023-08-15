@@ -8,9 +8,12 @@ export const config = plasmoConfig;
 setFont()
 
 export async function init(){
-    const options = await getOptions();
+    const options = await getOptions() ;
+    console.log(options);
     if (options.ENABLED){
+        console.log("ENABLED")
         window.addEventListener('yt-page-data-updated', getId);
     }
 }
-init()
+
+init() 
