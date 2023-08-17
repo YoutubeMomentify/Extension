@@ -48,7 +48,6 @@ export async function getAllComments(
         response.data.nextPageToken,
       )
     } else {
-      console.log("Finished", matchingComments)
       checkVideoState(matchingComments)
       observeVideoState(matchingComments)
     }

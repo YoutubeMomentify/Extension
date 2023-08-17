@@ -9,7 +9,6 @@ setFont()
 
 async function init(){
     const options = await getOptions() ;
-    console.log(options)
     if (options.ENABLED){
         window.addEventListener('yt-page-data-updated', getId);
     }
