@@ -1,9 +1,9 @@
 {
-  "name": "YoutubeMomentify_extension",
-  "displayName": "Youtube momentify extension",
+  "name": "YoutubeMomentify",
+  "displayName": "Youtube momentify",
   "version": "0.0.1",
-  "description": "A basic Plasmo extension.",
-  "author": "Plasmo Corp. <foss@plasmo.com>",
+  "description": "An Extension to watch see timed comments",
+  "author": "Benallal",
   "scripts": {
     "dev": "plasmo dev",
     "build": "plasmo build",
