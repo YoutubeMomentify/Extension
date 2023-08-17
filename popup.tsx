@@ -44,7 +44,7 @@ function IndexPopup() {
       }
     } else {
       return {
-        bg:"neutral-100",
+        bg:"white",
         textColor: "[#303030]",
         borderColor:"slate-800",
       }
